@@ -10,8 +10,8 @@ import javax.persistence.EntityManagerFactory;
 import org.jboss.seam.spring.context.Configuration;
 import org.jboss.seam.spring.context.SpringContext;
 import org.jboss.seam.spring.inject.SpringBean;
-import org.jboss.solder.core.ExtensionManaged;
-import org.jboss.weld.context.ApplicationContext;
+import org.springframework.context.ApplicationContext;
+import org.springframework.orm.jpa.JpaTransactionManager;
 
 /**
  *
@@ -23,5 +23,8 @@ public class SpringContextProducer {
     @SpringContext
     @Configuration(locations = "classpath*:spring-conf.xml")
     private ApplicationContext context;
-   
+
+    @Produces
+    @SpringBean
+    private JpaTransactionManager jpaTransactionManager;
 }

@@ -22,6 +22,7 @@
        xmlns:s="urn:java:ee"
        xmlns:t="urn:java:org.jboss.seam.transaction"
        xmlns:task="urn:java:org.jbpm.task.annotations"
+       xmlns:jbpm="urn:java:org.jbpm"
        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://docs.jboss.org/cdi/beans_1_0.xsd">
     
     <alternatives>
@@ -43,12 +44,12 @@
         <s:modifies/>
     </t:SeSynchronizations>
 
-    <t:EntityTransaction>
+    <jbpm:SpringJpaTransaction>
         <s:modifies />
         <!--t:entityManager>
             <task:TaskPersistence/>
         </t:entityManager-->
-    </t:EntityTransaction>
+    </jbpm:SpringJpaTransaction>
     
     
 </beans>

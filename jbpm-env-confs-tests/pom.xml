@@ -41,7 +41,7 @@
         </dependency>
          <dependency>
             <groupId>org.jbpm</groupId>
-            <artifactId>jbpm-human-task-workitems</artifactId>
+            <artifactId>jbpm-human-task-work-items</artifactId>
             <version>${jbpm.version}</version>
         </dependency>
         <dependency>
@@ -146,6 +146,11 @@
             <version>${drools.version}</version>
             <scope>test</scope>
             <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.jboss.seam.transaction</groupId>
+            <artifactId>seam-transaction</artifactId>
+            <version>3.1.0.Final</version>
         </dependency>
     </dependencies>
     
